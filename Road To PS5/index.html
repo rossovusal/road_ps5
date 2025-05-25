@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>ROAD TO PS5 - Ana Səhifə</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .menu-container a button {
+            width: 220px;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #1e3a5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .menu-container a button:hover {
+            background-color: #294d73;
+        }
+        .menu-container a button.red {
+            background-color: #b71c1c;
+        }
+        .menu-container a button.red:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body onload="checkLogin();showMenu()">
+    <header>
+        <h1>ROAD TO PS5</h1>
+        <div id="userPanel"></div>
+    </header>
+    <main>
+        <h2>Turnirə xoş gəlmisiniz!</h2>
+        <div id="menu" class="menu-container"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 ROAD TO PS5</p>
+    </footer>
+    <script src="js/global.js"></script>
+    <script>
+    function showMenu() {
+        const menu = document.getElementById("menu");
+        menu.innerHTML = `
+            <a href='players.html'><button>İştirakçılar</button></a>
+            <a href='hosts.html'><button>Aparıcı Cədvəli</button></a>
+            <a href='games.html'><button>Oyunlar</button></a>
+            <a href='round.html'><button>Tur</button></a>
+            <a href='predictions.html'><button>Proqnozlar</button></a>
+            <a href='results.html'><button>Oyun Nəticələri</button></a>
+            <a href='standings.html'><button>Turnir Cədvəli</button></a>
+            <a href='pipeproqnoz.html'><button>Pipeproqnoz</button></a>
+            <a href='rules.html'><button>Qaydalar</button></a>
+            <a href='reset.html'><button class='red'>Turniri Sıfırla</button></a>
+        `;
+    }
+    </script>
+</body>
+</html>
